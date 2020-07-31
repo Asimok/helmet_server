@@ -19,7 +19,7 @@
     <artifactId>helmet_server</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>helmet_server</name>
-    <description>emqx_智慧安全帽</description>
+    <description>智慧安全帽</description>
 
     <properties>
         <java.version>1.8</java.version>

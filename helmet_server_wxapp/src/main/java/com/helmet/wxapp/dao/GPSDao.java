@@ -1,7 +1,7 @@
-package com.helmet_wxapp.dao;
+package com.helmet.wxapp.dao;
 
 
-import com.helmet_wxapp.data.GPSHistory;
+import com.helmet.wxapp.data.GPSHistory;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

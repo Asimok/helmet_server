@@ -1,8 +1,8 @@
-package com.helmet_wxapp.services;
+package com.helmet.wxapp.services;
 
 
-import com.helmet_wxapp.dao.CurrentDataDao;
-import com.helmet_wxapp.data.CurrentData;
+import com.helmet.wxapp.dao.CurrentDataDao;
+import com.helmet.wxapp.data.CurrentData;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

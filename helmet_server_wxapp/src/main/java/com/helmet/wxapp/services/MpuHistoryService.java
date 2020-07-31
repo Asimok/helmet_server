@@ -1,8 +1,8 @@
-package com.helmet_wxapp.services;
+package com.helmet.wxapp.services;
 
 
-import com.helmet_wxapp.dao.MpuDao;
-import com.helmet_wxapp.data.MpuHistory;
+import com.helmet.wxapp.dao.MpuDao;
+import com.helmet.wxapp.data.MpuHistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

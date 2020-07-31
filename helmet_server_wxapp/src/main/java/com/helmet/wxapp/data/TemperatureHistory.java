@@ -1,4 +1,4 @@
-package com.helmet_wxapp.data;
+package com.helmet.wxapp.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

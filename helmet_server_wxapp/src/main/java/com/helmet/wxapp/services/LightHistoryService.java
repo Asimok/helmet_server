@@ -1,8 +1,8 @@
-package com.helmet_wxapp.services;
+package com.helmet.wxapp.services;
 
 
-import com.helmet_wxapp.dao.LightDao;
-import com.helmet_wxapp.data.LightHistory;
+import com.helmet.wxapp.dao.LightDao;
+import com.helmet.wxapp.data.LightHistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

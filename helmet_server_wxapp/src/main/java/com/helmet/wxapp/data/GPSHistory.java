@@ -1,27 +1,23 @@
-package com.helmet_wxapp.data;
+package com.helmet.wxapp.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-@Table(name = "currentdata")
-public class CurrentData {
+@Table(name = "gps_history")
+public class GPSHistory {
     @Id
+    @GeneratedValue
+    private long id;
+
+    @Column
     private String helmet_id;
-
-    @Column
-    private double temperature;
-
-    @Column
-    private int warning;
-
-    @Column
-    private double light;
 
     @Column
     private String longitude;
@@ -41,30 +37,6 @@ public class CurrentData {
     @Column
     private long time;
 
-    public String getHelmet_id() {
-        return helmet_id;
-    }
-
-    public void setHelmet_id(String helmet_id) {
-        this.helmet_id = helmet_id;
-    }
-
-    public double getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
-    }
-
-    public int getWarning() {
-        return warning;
-    }
-
-    public void setWarning(int warning) {
-        this.warning = warning;
-    }
-
     public String getAltitude() {
         return altitude;
     }
@@ -73,12 +45,28 @@ public class CurrentData {
         this.altitude = altitude;
     }
 
-    public double getLight() {
-        return light;
+    public long getTime() {
+        return time;
     }
 
-    public void setLight(double light) {
-        this.light = light;
+    public void setTime(long time) {
+        this.time = time;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getHelmet_id() {
+        return helmet_id;
+    }
+
+    public void setHelmet_id(String helmet_id) {
+        this.helmet_id = helmet_id;
     }
 
     public String getLongitude() {
@@ -111,13 +99,5 @@ public class CurrentData {
 
     public void setE_W(String e_W) {
         E_W = e_W;
-    }
-
-    public long getTime() {
-        return time;
-    }
-
-    public void setTime(long time) {
-        this.time = time;
     }
 }

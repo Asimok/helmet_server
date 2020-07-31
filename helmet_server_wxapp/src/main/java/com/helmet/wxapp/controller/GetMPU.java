@@ -1,9 +1,10 @@
-package com.helmet_wxapp.controller;
+package com.helmet.wxapp.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.helmet_wxapp.data.MpuHistory;
-import com.helmet_wxapp.data.process_date;
+import com.helmet.wxapp.dao.MpuDao;
+import com.helmet.wxapp.data.MpuHistory;
+import com.helmet.wxapp.data.process_date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ import java.util.List;
 public class GetMPU {
 
     @Autowired
-    com.helmet_wxapp.dao.MpuDao mpuDao;
+    MpuDao mpuDao;
 
 
     @PostMapping("/GetMPU")

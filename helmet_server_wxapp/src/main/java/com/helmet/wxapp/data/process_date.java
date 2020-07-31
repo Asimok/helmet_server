@@ -1,4 +1,4 @@
-package com.helmet_wxapp.data;
+package com.helmet.wxapp.data;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

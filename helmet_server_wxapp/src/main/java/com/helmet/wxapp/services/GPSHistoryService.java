@@ -1,8 +1,8 @@
-package com.helmet_wxapp.services;
+package com.helmet.wxapp.services;
 
 
-import com.helmet_wxapp.dao.GPSDao;
-import com.helmet_wxapp.data.GPSHistory;
+import com.helmet.wxapp.dao.GPSDao;
+import com.helmet.wxapp.data.GPSHistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

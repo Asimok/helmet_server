@@ -1,9 +1,10 @@
-package com.helmet_wxapp.controller;
+package com.helmet.wxapp.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.helmet_wxapp.data.LightHistory;
-import com.helmet_wxapp.data.process_date;
+import com.helmet.wxapp.dao.TemperatureDao;
+import com.helmet.wxapp.data.TemperatureHistory;
+import com.helmet.wxapp.data.process_date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,15 +17,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class GetLight {
+public class GetTemerature {
 
     @Autowired
-    com.helmet_wxapp.dao.LightDao lightDao;
+    TemperatureDao temperatureDao;
 
 
-    @PostMapping("/GetLight")
+    @PostMapping("/GetTemerature")
     @ResponseBody
-    public List<LightHistory> GetLight(@RequestBody String data) {
+    public List<TemperatureHistory> GetTemerature(@RequestBody String data) {
         System.out.println(data);
         JSONObject jsonObject = JSONObject.parseObject(data);
         /*
@@ -34,24 +35,23 @@ public class GetLight {
         String temp_id = jsonObject.getString("helmet_id");
         String temp_begin = jsonObject.getString("begin");
         String temp_end = jsonObject.getString("end");
-        System.out.println(temp_begin);
+        System.out.println(temp_id);
 
-        List<LightHistory> optional = lightDao.findAll();
-        List<LightHistory> temp = new ArrayList<>();
+        List<TemperatureHistory> optional = temperatureDao.findAll();
+        List<TemperatureHistory> temp = new ArrayList<>();
         for (int i = 0; i < optional.size(); i++) {
-            if (optional.get(i).getHelmet_id().equals(temp_id)) {
+            if (optional.get(i).getHelmet_id().toString().equals(temp_id)) {
                 try {
                     if (process_date.check_dateToStamp(temp_begin, temp_end, String.valueOf(optional.get(i).getTime()))) {
-                        LightHistory temp_temp = new LightHistory();
+                        TemperatureHistory temp_temp = new TemperatureHistory();
                         temp_temp.setHelmet_id(optional.get(i).getHelmet_id());
-                        temp_temp.setLight(optional.get(i).getLight());
+                        temp_temp.setTemperature(optional.get(i).getTemperature());
                         temp_temp.setTime(optional.get(i).getTime());
                         temp.add(temp_temp);
                     }
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
             }
         }
 

@@ -1,8 +1,8 @@
-package com.helmet_wxapp.services;
+package com.helmet.wxapp.services;
 
 
-import com.helmet_wxapp.dao.TemperatureDao;
-import com.helmet_wxapp.data.TemperatureHistory;
+import com.helmet.wxapp.data.TemperatureHistory;
+import com.helmet.wxapp.dao.TemperatureDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
