@@ -1,7 +1,6 @@
 package com.helmet_wxapp.services;
 
 
-
 import com.helmet_wxapp.dao.MpuDao;
 import com.helmet_wxapp.data.MpuHistory;
 
@@ -12,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class MpuHistoryService {
     @Autowired
     private MpuDao mpuDao;
+
     public MpuHistoryService(MpuDao mpuDao) {
         this.mpuDao = mpuDao;
     }

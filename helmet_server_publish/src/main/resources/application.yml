@@ -7,16 +7,16 @@ helmet:
       username: admin
       password: public
       #tcp://ip:port
-      host-url : tcp://39.96.68.13:1883
-#      client-id : helmet${random.value}
-      client-id : helmet_server_publish${random.value}
-      default-topic : helmet_topic
-#      client-id: mqttjs_d30ed7b6{random.value}
-#      default-topic: testtopic/#
+      host-url: tcp://39.96.68.13:1883
+      #      client-id : helmet${random.value}
+      client-id: helmet_server_publish${random.value}
+      default-topic: helmet_topic
+      #      client-id: mqttjs_d30ed7b6{random.value}
+      #      default-topic: testtopic/#
 
       #default-topic: $SYS/brokers/+/clients/#
-      timeout : 60
-      keep-alive : 60
+      timeout: 60
+      keep-alive: 60
       #qos 可以取值0,1,2
       q-os: 0
 

@@ -1,7 +1,6 @@
 package com.helmet_wxapp.dao;
 
 
-
 import com.helmet_wxapp.data.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;

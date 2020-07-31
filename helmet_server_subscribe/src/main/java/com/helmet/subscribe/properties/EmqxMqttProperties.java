@@ -1,8 +1,9 @@
 package com.helmet.subscribe.properties;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+
+import lombok.Data;
 
 /**
  * 配置文件属性的操作
@@ -11,6 +12,15 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties("helmet.mqtt.emqx")
 public class EmqxMqttProperties {
+
+    private String username;
+    private String password;
+    private String hostUrl;
+    private String clientId;
+    private String defaultTopic;
+    private Integer timeout;
+    private Integer keepAlive;
+    private Integer qOs;
 
     public String getUsername() {
         return username;
@@ -75,15 +85,6 @@ public class EmqxMqttProperties {
     public void setQOs(Integer qOs) {
         this.qOs = qOs;
     }
-
-    private String username;
-    private String password;
-    private String hostUrl;
-    private String clientId;
-    private String defaultTopic;
-    private Integer timeout;
-    private Integer keepAlive;
-    private Integer qOs;
 
 
 }

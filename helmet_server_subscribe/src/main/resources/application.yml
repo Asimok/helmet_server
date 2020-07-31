@@ -7,11 +7,11 @@ helmet:
       username: admin
       password: public
       #tcp://ip:port
-      host-url : tcp://39.96.68.13:1883
-      client-id : helmet_server_subscribe${random.value}
-      default-topic : helmet_topic
-      timeout : 60
-      keep-alive : 60
+      host-url: tcp://39.96.68.13:1883
+      client-id: helmet_server_subscribe${random.value}
+      default-topic: helmet_topic
+      timeout: 60
+      keep-alive: 60
       #qos 可以取值0,1,2
       q-os: 0
 spring:

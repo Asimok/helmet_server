@@ -2,7 +2,7 @@ package com.helmet.subscribe.services;
 
 import com.helmet.subscribe.dao.LightDao;
 import com.helmet.subscribe.data.LightHistory;
-import com.helmet.subscribe.data.TemperatureHistory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

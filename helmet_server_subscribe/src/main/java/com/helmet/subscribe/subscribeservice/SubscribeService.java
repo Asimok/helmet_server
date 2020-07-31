@@ -1,16 +1,28 @@
 package com.helmet.subscribe.subscribeservice;
 
 import com.helmet.subscribe.common.Contants;
-import com.helmet.subscribe.data.*;
-import com.helmet.subscribe.services.*;
+import com.helmet.subscribe.data.CurrentData;
+import com.helmet.subscribe.data.GPSHistory;
+import com.helmet.subscribe.data.LightHistory;
+import com.helmet.subscribe.data.MpuHistory;
+import com.helmet.subscribe.data.TemperatureHistory;
+import com.helmet.subscribe.services.CurrentDataService;
+import com.helmet.subscribe.services.GPSHistoryService;
+import com.helmet.subscribe.services.LightHistoryService;
+import com.helmet.subscribe.services.MpuHistoryService;
+import com.helmet.subscribe.services.TemperatureHistoryService;
+
 import net.sf.json.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.stereotype.Service;
-import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.FutureTask;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 订阅者
@@ -19,24 +31,17 @@ import java.util.concurrent.FutureTask;
 @Slf4j
 public class SubscribeService {
 
+    CurrentData currentData = new CurrentData();
     @Autowired
     private TemperatureHistoryService temperatureService;
-
-
     @Autowired
     private LightHistoryService lightHistoryService;
-
     @Autowired
     private GPSHistoryService gpsHistoryService;
-
-
     @Autowired
     private MpuHistoryService mpuHistoryService;
-
-
     @Autowired
     private CurrentDataService currentDataService;
-    CurrentData currentData = new CurrentData();
 
     @Bean
     @ServiceActivator(inputChannel = Contants.MQTT_SUBSCRIBE_CHANNEL)
@@ -45,9 +50,9 @@ public class SubscribeService {
             //System.out.println("订阅者订阅消息头是：" + message.getHeaders().toString());
             System.out.println("订阅者订阅消息内容是：" + message.getPayload().toString());
             JSONObject jsonObject = null;
-            try{
+            try {
                 jsonObject = JSONObject.fromObject(message.getPayload().toString());
-                switch(jsonObject.getString("sensor")) {
+                switch (jsonObject.getString("sensor")) {
                     case "temperature":
                         temperatureHandler(jsonObject);
                         break;
@@ -63,7 +68,7 @@ public class SubscribeService {
                     default:
                         break;
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         };

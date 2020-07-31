@@ -1,8 +1,5 @@
 package com.helmet.publish.data;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-
 public class Temperature {
     private long helmet_id;
     private double temperature;

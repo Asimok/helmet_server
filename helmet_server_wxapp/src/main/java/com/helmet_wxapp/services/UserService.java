@@ -1,7 +1,6 @@
 package com.helmet_wxapp.services;
 
 
-
 import com.helmet_wxapp.dao.UserDao;
 import com.helmet_wxapp.data.User;
 
@@ -16,6 +15,7 @@ public class UserService {
     public UserService(UserDao userDao) {
         this.userDao = userDao;
     }
+
     public void saveUserInfo(User user) {
         userDao.save(user);
     }
