@@ -6,6 +6,8 @@
     <modules>
         <module>helmet_server_publish</module>
         <module>helmet_server_subscribe</module>
+        <module>helmet_server_wxapp</module>
+        <module>helmet_server_wxapp</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

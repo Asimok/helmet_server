@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/helmet_server.iml" filepath="$PROJECT_DIR$/helmet_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/helmet_server_publish/helmet_server_publish.iml" filepath="$PROJECT_DIR$/helmet_server_publish/helmet_server_publish.iml" />
       <module fileurl="file://$PROJECT_DIR$/helmet_server_subscribe/helmet_server_subscribe.iml" filepath="$PROJECT_DIR$/helmet_server_subscribe/helmet_server_subscribe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helmet_server_wxapp/helmet_server_wxapp.iml" filepath="$PROJECT_DIR$/helmet_server_wxapp/helmet_server_wxapp.iml" />
     </modules>
   </component>
 </project>
