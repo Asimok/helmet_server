@@ -3,9 +3,13 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/helmet_server_publish" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_publish/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_publish/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/helmet_server_subscribe" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_subscribe/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_subscribe/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/helmet_server_wxapp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/helmet_server_wxapp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/helmet_server_wxapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_wxapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/helmet_server_wxapp/src/main/resources" charset="UTF-8" />
   </component>
 </project>

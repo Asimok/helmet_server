@@ -1,17 +1,15 @@
-package com.helmet.publish;
+package com.helmet.wxapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * emqx 发布者（生产者）的启动程序
+ * 订阅者启动类
  */
 @SpringBootApplication
-public class PublishApplication {
-
-
+public class WxappApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PublishApplication.class, args);
+        SpringApplication.run(WxappApplication.class, args);
+
     }
 }
-

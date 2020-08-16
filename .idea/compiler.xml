@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="helmet_server_publish" />
         <module name="helmet_server_subscribe" />
+        <module name="helmet_server_publish" />
         <module name="helmet_server_wxapp" />
       </profile>
     </annotationProcessing>
@@ -22,8 +22,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="helmet_server" options="" />
-      <module name="helmet_server_publish" options="" />
-      <module name="helmet_server_subscribe" options="" />
+      <module name="helmet_server_publish" options="-parameters" />
+      <module name="helmet_server_subscribe" options="-parameters" />
+      <module name="helmet_server_wxapp" options="-parameters" />
     </option>
   </component>
 </project>

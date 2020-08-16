@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class GetLight {
@@ -39,23 +40,15 @@ public class GetLight {
 
         List<LightHistory> optional = lightDao.findAll();
         List<LightHistory> temp = new ArrayList<>();
-        for (int i = 0; i < optional.size(); i++) {
-            if (optional.get(i).getHelmet_id().equals(temp_id)) {
-                try {
-                    if (process_date.check_dateToStamp(temp_begin, temp_end, String.valueOf(optional.get(i).getTime()))) {
-                        LightHistory temp_temp = new LightHistory();
-                        temp_temp.setHelmet_id(optional.get(i).getHelmet_id());
-                        temp_temp.setLight(optional.get(i).getLight());
-                        temp_temp.setTime(optional.get(i).getTime());
-                        temp.add(temp_temp);
-                    }
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
+        temp = optional.stream().filter(id-> {
+            try {
+                return id.getHelmet_id().equals(temp_id)&&process_date.
+                        check_dateToStamp(temp_begin, temp_end, String.valueOf(id.getTime()));
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
-        }
-
+            return false;
+        }).collect(Collectors.toList());
         return temp;
     }
 
